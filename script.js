@@ -9,13 +9,23 @@ function getComputerChoice(ComputerChoice){
     } else if (ComputerChoice < 0.33) {
         return console.log("Paper");
     } else {
-        return console.log("Scissor");
+        return console.log("Scissors");
     }
 }
 
 function getHumanChoice(HumanChoice){
-    console.log(HumanChoice);
+    if(HumanChoice == 1) {
+        return console.log("Rock");
+    } else if (HumanChoice == 2) {
+        return console.log("Paper");
+    } else if (HumanChoice == 3) {
+        return console.log("Scissors");
+    } else {
+        console.log("Please choose a valid option");
+        getHumanChoice(prompt("Type 1 for Rock, 2 for Paper, 3 for Scissors"));
+    }
+
 }
 
 getComputerChoice(Math.random());
-getHumanChoice(prompt("Choose between Rock, Paper or Scissor: "));
+getHumanChoice(prompt("Type 1 for Rock, 2 for Paper, 3 for Scissors"));
