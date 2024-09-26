@@ -40,20 +40,33 @@ function getHumanChoice(humanChoice){
 
 function playRound(computerChoice, humanChoice){
         if(computerChoice === humanChoice){
-            console.log(computerChoice);
-            console.log(humanChoice);
             console.log("That's a tie!");
         } else if (
             (computerChoice === "Rock" && humanChoice === "Paper") ||
             (computerChoice === "Paper" && humanChoice === "Scissors") ||
             (computerChoice === "Scissors" && humanChoice === "Rock")
-        ) {
-            console.log("You won!");
+            ) {
+            humanScore++;
+            console.log("You won this round!");
         } else {
-            console.log("You lost!");
+            computerScore++;
+            console.log("You lost this round!");
         }
 }
 
-computerChoice = getComputerChoice(Math.random());
-humanChoice = getHumanChoice(prompt("Type 1 for Rock, 2 for Paper, 3 for Scissors"));
-playRound(computerChoice, humanChoice);
+function playGame(){
+    do {
+        computerChoice = getComputerChoice(Math.random());
+        humanChoice = getHumanChoice(prompt("Type 1 for Rock, 2 for Paper, 3 for Scissors"));
+        playRound(computerChoice, humanChoice);
+    } while (humanScore < 3 && computerScore < 3)
+
+    if (humanScore === 3) {
+        alert("Congratulations! You won this Best of Five against the Computer!");
+    } else {
+        alert("I'm sorry! The computer won this time. Do you want to try again?");
+    }
+}
+
+
+playGame();
