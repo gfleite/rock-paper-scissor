@@ -40,17 +40,17 @@ function getHumanChoice(humanChoice){
 
 function playRound(computerChoice, humanChoice){
         if(computerChoice === humanChoice){
-            console.log("That's a tie!");
+            alert("That's a tie!");
         } else if (
             (computerChoice === "Rock" && humanChoice === "Paper") ||
             (computerChoice === "Paper" && humanChoice === "Scissors") ||
             (computerChoice === "Scissors" && humanChoice === "Rock")
             ) {
             humanScore++;
-            console.log("You won this round!");
+            alert("You won this round!");
         } else {
             computerScore++;
-            console.log("You lost this round!");
+            alert("You lost this round!");
         }
 }
 
