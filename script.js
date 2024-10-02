@@ -39,19 +39,19 @@ function getHumanChoice(humanChoice){
 }
 
 function playRound(computerChoice, humanChoice){
-        if(computerChoice === humanChoice){
-            alert("That's a tie!");
-        } else if (
-            (computerChoice === "Rock" && humanChoice === "Paper") ||
-            (computerChoice === "Paper" && humanChoice === "Scissors") ||
-            (computerChoice === "Scissors" && humanChoice === "Rock")
-            ) {
-            humanScore++;
-            alert("You won this round!");
-        } else {
-            computerScore++;
-            alert("You lost this round!");
-        }
+    if(computerChoice === humanChoice){
+        alert("That's a tie!");
+    } else if (
+        (computerChoice === "Rock" && humanChoice === "Paper") ||
+        (computerChoice === "Paper" && humanChoice === "Scissors") ||
+        (computerChoice === "Scissors" && humanChoice === "Rock")
+        ) {
+        humanScore++;
+        alert("You won this round!");
+    } else {
+        computerScore++;
+        alert("You lost this round!");
+    }
 }
 
 function playGame(){
