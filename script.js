@@ -6,15 +6,12 @@ humanScore = 0;
 function getComputerChoice(computerChoice){
     if(computerChoice >= 0.33 && computerChoice< 0.66) {
         computerChoice = "Rock";
-        console.log(computerChoice);
         return computerChoice;
     } else if (computerChoice < 0.33) {
         computerChoice = "Paper";
-        console.log(computerChoice);
         return computerChoice;
     } else {
         computerChoice = "Scissors";
-        console.log(computerChoice);
         return computerChoice;
     }
 }
